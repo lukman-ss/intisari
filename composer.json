@@ -1,0 +1,49 @@
+{
+    "name": "lukman-ss/intisari",
+    "description": "The core PHP framework engine of Intisari.",
+    "type": "library",
+    "keywords": [
+        "framework",
+        "intisari",
+        "php",
+        "routing",
+        "http"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lukman",
+            "email": "lukmanumb1@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "lukman-ss/http": "^1.0",
+        "lukman-ss/router": "^1.0",
+        "lukman-ss/container": "^1.0",
+        "lukman-ss/config": "^1.0",
+        "lukman-ss/database": "^1.0",
+        "lukman-ss/view": "^1.0",
+        "lukman-ss/console": "^1.0",
+        "lukman-ss/validation": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Intisari\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Intisari\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "@php vendor/phpunit/phpunit/phpunit"
+    }
+}
