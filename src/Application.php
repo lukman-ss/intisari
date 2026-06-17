@@ -14,6 +14,8 @@ use Lukman\View\ViewFactory;
 use Lukman\Database\DatabaseManager;
 use Lukman\Database\Connection;
 use Lukman\Validation\ValidatorFactory;
+use Lukman\Session\SessionManager;
+use Lukman\Session\SessionStore;
 use Lukman\Console\ConsoleApplication;
 use Lukman\Console\CommandInterface;
 use Lukman\Console\Input;
@@ -418,6 +420,22 @@ class Application
     }
 
     /**
+     * Get the session manager instance.
+     */
+    public function sessionManager(): SessionManager
+    {
+        return $this->make(SessionManager::class);
+    }
+
+    /**
+     * Get a session store instance.
+     */
+    public function session(?string $driver = null): SessionStore
+    {
+        return $this->sessionManager()->store($driver);
+    }
+
+    /**
      * Run the given data against the validator rules.
      *
      * @param array<string, mixed> $data
@@ -504,6 +522,7 @@ class Application
             ViewServiceProvider::class,
             DatabaseServiceProvider::class,
             ValidationServiceProvider::class,
+            SessionServiceProvider::class,
         ];
         foreach ($defaultProviders as $provider) {
             $this->register($provider);
@@ -661,6 +680,7 @@ class Application
         $this->register(ViewServiceProvider::class);
         $this->register(DatabaseServiceProvider::class);
         $this->register(ValidationServiceProvider::class);
+        $this->register(SessionServiceProvider::class);
     }
 
     /**

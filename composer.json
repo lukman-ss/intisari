@@ -25,7 +25,8 @@
         "lukman-ss/database": "^1.0",
         "lukman-ss/view": "^1.0",
         "lukman-ss/console": "^1.0",
-        "lukman-ss/validation": "^1.0"
+        "lukman-ss/validation": "^1.0",
+        "lukman-ss/session": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.5"

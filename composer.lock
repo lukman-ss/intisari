@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "044f825c7f12380a648b61969db98696",
+    "content-hash": "75697bc59f5032d35376d159fb718003",
     "packages": [
         {
             "name": "lukman-ss/config",
@@ -304,6 +304,49 @@
                 "source": "https://github.com/lukman-ss/router/tree/v1.0.0"
             },
             "time": "2026-06-13T08:31:52+00:00"
+        },
+        {
+            "name": "lukman-ss/session",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lukman-ss/session.git",
+                "reference": "ea52c85bcf688079bffc58a58c01b42dac759165"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lukman-ss/session/zipball/ea52c85bcf688079bffc58a58c01b42dac759165",
+                "reference": "ea52c85bcf688079bffc58a58c01b42dac759165",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lukman\\Session\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lukman",
+                    "email": "lukmanumb1@gmail.com"
+                }
+            ],
+            "description": "A standalone PHP session management library.",
+            "support": {
+                "issues": "https://github.com/lukman-ss/session/issues",
+                "source": "https://github.com/lukman-ss/session/tree/v1.0.0"
+            },
+            "time": "2026-06-17T13:27:55+00:00"
         },
         {
             "name": "lukman-ss/validation",

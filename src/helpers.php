@@ -6,6 +6,7 @@ use Intisari\Application;
 use Intisari\Exception\IntisariException;
 use Lukman\Http\RedirectResponse;
 use Lukman\Http\Response;
+use Lukman\Session\SessionStore;
 
 if (!function_exists('app')) {
     function app(?string $abstract = null): mixed
@@ -44,6 +45,13 @@ if (!function_exists('view')) {
     function view(string $view, array $data = []): string
     {
         return app()->render($view, $data);
+    }
+}
+
+if (!function_exists('session')) {
+    function session(?string $driver = null): SessionStore
+    {
+        return app()->session($driver);
     }
 }
 
